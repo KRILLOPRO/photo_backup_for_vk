@@ -7,7 +7,6 @@ import os
 dotenv.load_dotenv()
 
 VK_TOKEN = os.environ.get("VK_TOKEN")
-YANDEX_TOKEN = os.environ.get("YANDEX_TOKEN")
 
 
 
@@ -89,7 +88,7 @@ class VKPhotoBackup:
 
 # Запрос ID юзера в ВК
 VK_USER_ID = input("Введите ID пользователя ВК: ")
-
+YANDEX_TOKEN = input('Введите токен яндекс диска')
 
 backup = VKPhotoBackup(VK_TOKEN, YANDEX_TOKEN, VK_USER_ID)
 backup.backup_photos()
